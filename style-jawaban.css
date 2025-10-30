@@ -1,0 +1,322 @@
+:root {
+    --primary-gold: #d4af37;
+    --secondary-gold: #e9bf7f;
+    --parchment: #f8f1d8;
+    --dark-parchment: #f7f2e8;
+    --dark-brown: #252323;
+    --pirate-red: #8B0000;
+    --text-color: #2c1810;
+    --box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    --transition: all 0.3s ease-in-out;
+}
+
+.Bagian-atas {
+    position: relative;
+    padding: 50px 25px;
+    text-align: center;
+    color: var(--parchment);
+    background-image: url("1.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+    margin: 20px;
+    border: 3px solid var(--primary-gold);
+    box-shadow: var(--box-shadow);
+}
+
+.Bagian-atas.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Bagian-atas::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    z-index: 0;
+}
+
+.Bagian-atas h1,
+.Bagian-atas h2,
+.Bagian-atas p {
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+@font-face {
+    font-family: "PiratesScroll";
+    src: url("fonts/Pirate Scroll.otf") format("truetype");
+}
+
+.judul {
+    font-family: "PiratesScroll", cursive;
+    font-size: 2.5rem;
+    font-weight: 320;
+    color: var(--parchment);
+    margin-bottom: 10px;
+}
+
+.subjudul {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+    color: var(--parchment);
+    font-style: italic;
+}
+
+body {
+    background: radial-gradient(ellipse at center, #ff7e5f 0%, #feb47b 30%, #1a1a2e 70%);
+    min-height: 100vh;
+    color: var(--text-color);
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+.deskripsi h2 {
+    text-align: center;
+    color: #8B0000;
+    background: #f8f1d8;
+    margin: 0 auto 2rem auto;
+    padding: 20px 40px;
+    font-size: 1.8rem;
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    font-family: "PiratesScroll", cursive;
+}
+
+section {
+    background: var(--dark-parchment);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    transition: var(--transition);
+    border: 2px solid var(--secondary-gold);
+    border-left: 4px solid var(--primary-gold);
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.math-block {
+    background: #fff8e5;
+    border-radius: 0 10px 10px 0;
+    padding: 0;
+    text-align: left;
+    margin: 0;
+    overflow-x: auto;
+}
+
+.soal-text {
+    padding: 20px;
+    border-bottom: 1px dashed var(--secondary-gold);
+    display: block;
+}
+
+.soal-text h3 {
+    color: var(--pirate-red);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--secondary-gold);
+    font-family: "PiratesScroll", cursive;
+    font-weight: normal;
+}
+
+.soal-text p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+
+.kesimpulan {
+    background-color: rgba(212, 175, 55, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-gold);
+    font-weight: 500;
+    margin-top: 1rem;
+    border: 1px dashed var(--secondary-gold);
+}
+
+.penjelasan {
+    background-color: rgba(248, 241, 216, 0.7);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    border: 1px solid #e9bf7f;
+}
+
+.penjelasan h3 {
+    color: #8B0000;
+    font-family: "PiratesScroll", cursive;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggle-penjelasan {
+    background: linear-gradient(135deg, #d4af37, #e9bf7f);
+    color: #2c1810;
+    border: 2px solid #d4af37;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-family: "PiratesScroll", cursive;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: all 0.3s ease;
+}
+
+.toggle-penjelasan:hover {
+    background: linear-gradient(135deg, #e9bf7f, #d4af37);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.penjelasan-content {
+    transition: all 0.3s ease-in-out;
+}
+
+.MathJax, .MJX-TEX, mjx-container {
+    display: inline !important;
+    visibility: visible !important;
+}
+
+.MathJax {
+    font-size: 1.1rem !important;
+}
+
+.mjx-chtml {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.MathJax_Display {
+    margin: 1.5rem 0 !important;
+    overflow-x: auto;
+    padding: 1rem;
+    background-color: rgba(255, 248, 229, 0.8);
+    border-radius: 10px;
+    border: 1px solid var(--secondary-gold);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@media (max-width: 768px) {
+    .Bagian-atas {
+        margin: 10px;
+        padding: 30px 15px;
+    }
+    
+    .deskripsi {
+        margin: 10px;
+        padding: 20px;
+    }
+    
+    .judul {
+        font-size: 2rem;
+    }
+    
+    .subjudul {
+        font-size: 1rem;
+    }
+    
+    .deskripsi h2 {
+        font-size: 1.5rem;
+    }
+    
+    section {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .judul {
+        font-size: 1.7rem;
+    }
+    
+    .Bagian-atas {
+        padding: 20px 10px;
+    }
+    
+    .MathJax_Display {
+        padding: 0.5rem;
+        font-size: 0.9rem !important;
+    }
+    
+    .soal-text,
+    .penjelasan {
+        padding: 15px;
+    }
+}
+
+@media print {
+    .Bagian-atas {
+        background: white !important;
+        color: black !important;
+        box-shadow: none !important;
+        border: 2px solid #000 !important;
+    }
+    
+    section {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        page-break-inside: avoid;
+    }
+    
+    .penjelasan {
+        background: white !important;
+        border: 1px solid #ddd !important;
+    }
+    
+    body {
+        background: white !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+.debug-info {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 1000;
+}

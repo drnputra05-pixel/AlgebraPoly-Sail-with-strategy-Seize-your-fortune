@@ -1,0 +1,415 @@
+body {
+  background: 
+    radial-gradient(ellipse at center, #ff7e5f 0%, #feb47b 30%, #1a1a2e 70%);
+  min-height: 100vh;
+  color: black;
+}
+header {
+  position: relative;
+  padding: 30px 20px;
+  text-align: center;
+  color: #f8f1d8;
+  background: 
+    linear-gradient(135deg, rgba(139, 69, 19, 0.8) 0%, rgba(212, 175, 55, 0.8) 100%),
+    url("1.png");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+  margin: 20px;
+  border: 3px solid #d4af37;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+header.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  z-index: 0;
+}
+
+header h1,
+header h2,
+header p {
+  position: relative;
+  z-index: 1;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.judul {
+  font-family: "PiratesScroll", cursive;
+  font-size: 2.2rem;
+  font-weight: 320;
+  color: #f8f1d8;
+  margin-bottom: 8px;
+}
+
+.subjudul {
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  font-size: 1.1rem; 
+  color: #f8f1d8;
+  font-style: italic;
+}
+.Bagian-atas {
+    position: relative;
+    padding: 50px 25px;
+    text-align: center;
+    color: #f8f1d8;
+    background: 
+        linear-gradient(135deg, rgba(139, 69, 19, 0.7) 0%, rgba(212, 175, 55, 0.7) 100%),
+        url("1.png");
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px;
+    border: 3px solid #d4af37;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.Bagian-atas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    z-index: 0;
+}
+
+.judul {
+    font-family: "PiratesScroll", cursive;
+    font-size: 2.5rem;
+    font-weight: 320;
+    color: #f8f1d8;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.subjudul {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+    color: #f8f1d8;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.developer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.about-section, .team-section, .advisor-section {
+    margin-bottom: 50px;
+}
+
+.about-section h2, .team-section h2, .advisor-section h2 {
+    text-align: center;
+    font-family: "PiratesScroll", cursive;
+    font-size: 2.2rem;
+    color: #f8f1d8;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #d4af37;
+    padding-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.about-section p {
+    text-align: center;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #f8f1d8;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.developer-card {
+    background: rgba(248, 241, 216, 0.95);
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    color: black;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.developer-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.developer-image {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #e9bf7f;
+    background: #f7f2e8;
+}
+
+.developer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.developer-info h3 {
+    font-size: 1.4rem;
+    color: #8B4513;
+    margin-bottom: 8px;
+    font-family: "PiratesScroll", cursive;
+}
+
+.nim {
+    font-weight: bold;
+    color: #b39363;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.description {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-style: italic;
+    color: #333;
+}
+
+.instagram-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.instagram-icon {
+    color: #8B4513;
+    font-size: 1.2rem;
+}
+
+.instagram-username {
+    background: #f7f2e8;
+    padding: 6px 12px;
+    border-radius: 15px;
+    border: 1px solid #e9bf7f;
+    color: #8B4513;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: 0.3s ease;
+}
+
+.instagram-username:hover {
+    background: #b39363;
+    color: #252323;
+}
+
+.advisor-card {
+    background: rgba(248, 241, 216, 0.95);
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    padding: 35px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    color: black;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.advisor-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #e9bf7f;
+    flex-shrink: 0;
+    background: #f7f2e8;
+}
+
+.advisor-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.advisor-info {
+    flex: 1;
+}
+
+.advisor-info h3 {
+    font-size: 1.5rem;
+    color: #8B4513;
+    margin-bottom: 10px;
+    font-family: "PiratesScroll", cursive;
+}
+
+.position {
+    font-weight: bold;
+    color: #b39363;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.department, .expertise {
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.advisor-info .description {
+    margin: 15px 0;
+    line-height: 1.6;
+    font-style: normal;
+}
+
+.institution-section {
+    background: rgba(248, 241, 216, 0.95);
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color: black;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.institution-logo {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    background: #f7f2e8;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid #e9bf7f;
+}
+
+.institution-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.institution-info h3 {
+    font-size: 1.4rem;
+    color: #8B4513;
+    margin-bottom: 10px;
+    font-family: "PiratesScroll", cursive;
+}
+
+.institution-info p {
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.footer {
+    background: rgba(248, 241, 216, 0.95);
+    color: black;
+    text-align: center;
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.footer-content p {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #8B4513;
+    margin: 0 15px;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .judul {
+        font-size: 2rem;
+    }
+    
+    .subjudul {
+        font-size: 1.1rem;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .advisor-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+    
+    .advisor-image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .institution-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .developer-container {
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Bagian-atas {
+        margin: 10px;
+        padding: 30px 15px;
+    }
+    
+    .judul {
+        font-size: 1.6rem;
+    }
+    
+    .about-section h2, .team-section h2, .advisor-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .developer-card, .advisor-card, .institution-section {
+        padding: 20px;
+    }
+}
+
+@font-face {
+    font-family: "PiratesScroll";
+    src: url("fonts/Pirate Scroll.otf") format("truetype");
+}

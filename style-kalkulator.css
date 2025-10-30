@@ -1,0 +1,262 @@
+header {
+  position: relative;
+  padding: 50px 25px;
+  text-align: center;
+  color: #f8f1d8;
+  background-image: url("1.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+  margin: 20px;
+  border: 3px solid #d4af37;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+header.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  z-index: 0;
+}
+
+header h1,
+header h2,
+header p {
+  position: relative;
+  z-index: 1;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+@font-face {
+  font-family: "PiratesScroll";
+  src: url("fonts/Pirate Scroll.otf") format("truetype");
+}
+
+.judul {
+  font-family: "PiratesScroll", cursive;
+  font-size: 2.5rem;
+  font-weight: 320;
+  color: #f8f1d8;
+  margin-bottom: 10px;
+}
+
+.subjudul {
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  font-size: 1.3rem;
+  color: #f8f1d8;
+  font-style: italic;
+}
+
+
+body {
+  background: 
+    radial-gradient(ellipse at center, #ff7e5f 0%, #feb47b 30%, #1a1a2e 70%);
+  min-height: 100vh;
+  color: black;
+}
+
+.kalkulator-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 0 10px;
+}
+
+.pilihan {
+    background: rgba(248, 241, 216, 0.95);
+    border: 2px solid #d4af37;
+    border-radius: 15px;
+    padding: 20px 15px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.pilihan h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "PiratesScroll", cursive;
+    color: #8B4513;
+    font-size: 1.5rem;
+}
+
+.pilihan label {
+    display: block;
+    width: 100%;
+    background: linear-gradient(135deg, #f8f1d8 0%, #e9dcb9 100%);
+    padding: 12px 15px;
+    border: 2px solid #8B4513;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #5d4037;
+    font-size: 1rem;
+}
+
+.pilihan select,
+.pilihan input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 2px solid #b39363;
+    border-radius: 8px;
+    font-size: 16px; 
+    background: #fff8e5;
+    min-height: 44px; 
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    padding: 15px 25px;
+    background: linear-gradient(135deg, #8B4513 0%, #d4af37 100%);
+    color: #f8f1d8;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    min-height: 44px; 
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #d4af37 0%, #ffd700 100%);
+    transform: translateY(-2px);
+}
+
+.input-group {
+    margin: 15px 0;
+    padding: 15px;
+    background: rgba(255, 248, 229, 0.8);
+    border-radius: 8px;
+    border-left: 4px solid #d4af37;
+}
+
+.input-group label {
+    background: none;
+    border: none;
+    padding: 0 0 8px 0;
+    margin: 0;
+    font-weight: bold;
+    color: #8B4513;
+}
+
+.hasil-section {
+    margin-top: 20px;
+    background: rgba(248, 241, 216, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #d4af37;
+}
+
+.step-section {
+    background: #fff8e5;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border-left: 4px solid #8B4513;
+}
+
+.step {
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    border-left: 3px solid #d4af37;
+}
+
+.substep {
+    margin: 5px 0 5px 15px;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+    font-size: 0.95rem;
+}
+
+.equation {
+    font-family: 'Courier New', monospace;
+    background: #f0e6d2;
+    padding: 8px 12px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #d4af37;
+}
+
+.solution-box {
+    background: linear-gradient(135deg, #ffd700, #f8f1d8);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #d4af37;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.solution-item {
+    display: inline-block;
+    margin: 0 15px 10px 15px;
+    padding: 10px 15px;
+    background: #8B4513;
+    color: #ffd700;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+        padding: 20px;
+    }
+    
+    .pilihan {
+        padding: 30px 25px;
+    }
+    
+    .judul {
+        font-size: 2.2rem;
+    }
+    
+    .subjudul {
+        font-size: 1.2rem;
+    }
+    
+    button {
+        width: auto;
+        min-width: 200px;
+        margin: 20px auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .pilihan {
+        max-width: 600px;
+    }
+}
+
+button, select, input {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+@media (max-width: 768px) {
+    input, select, textarea {
+        font-size: 16px !important;
+    }
+}

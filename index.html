@@ -1,0 +1,456 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> AlgebraPoly: Sail & Seize </title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        <header class="Bagian-atas">
+            <h1 class="judul"> AlgebraPoly: Belajar Aljabar dengan Monopoli </h1>
+            <p class="subjudul"> Sail with strategy, Seize your fortune </p>
+        </header>
+
+        <div class="container">
+        <!-- bagian samping -->
+        <div class="isi">
+            <nav>
+            <ul>
+                <li><a href="carabermain.html">Cara Bermain AlgebraPoly </a> </li>
+                <li><a href="kuncijawaban.html">Kunci Jawaban AlgebraPoly </a></li>
+                <li><a href="kalkulator.html">Kalkulator Persamaan Linear </a></li>
+            </ul>
+            </nav>
+        </div>
+        <!-- bagian samping Selesai -->
+
+        <!-- materi belajar -->
+         <div class="deskripsi">
+            <h2> Matematika: Bahasa Universal Alam Semesta </h2>
+            <p> <em>“Mathematics is the queen of sciences and number theory is the queen of mathematics”</em>. Ungkapan dari Carl Friedrich Gauss yang dijuluki <em> Prince of Mathematics </em> menggambarkan betapa pentingnya eksistensi matematika dalam dunia ilmu pengetahuan.</p>
+            <p> Matematika berdiri di atas pondasi logika dan pembuktian yang pasti. Setiap teorema dibangun secara deduktif, sehingga kebenarannya bersifat mutlak dan abadi, berbeda dengan teori ilmiah yang dapat berubah seiring ditemukannya bukti baru. </p>
+            <p> Ilmu pengetahuan alam tidak akan berkembang tanpa bahasa matematika. Galileo Galilei, salah satu ilmuwan ternama mengatakan bahwa matematika merupakan salah satu bahasa yang ditulis oleh Tuhan di dunia ini. Fisika, astronomi, kimia, biologi, hingga teknik menjelaskan prinsip-prinsipnya melalui rumus dan persamaan matematis. Tanpa matematika, semua itu hanya menjadi kumpulan deskripsi kualitatif tanpa kepastian.</p>
+            <p> Tidak hanya di ilmu eksak, matematika juga berperan dalam ilmu sosial. Konsep seperti statistik, peluang, dan pemodelan digunakan untuk memahami perilaku manusia, pola ekonomi, hingga tren sosial. Matematika bukan hanya tentang angka dan rumus yang kaku, tetapi juga pola, struktur, dan hubungan antar unsur. Salah satu cabang yang mempelajari hal itu adalah aljabar, yaitu bidang yang berfokus pada simbol, variabel, dan aturan yang menghubungkan keduanya.</p> 
+            <p> Dengan menggunakan aljabar, kita dapat merepresentsikan masalah sehari-hari dalam model persamaan yang bisa diselesaikan secara logis. Salah satu konsep penting di dalamnya adalah Sistem Persamaan Linear, yaitu sekumpulan persamaan yang memiliki variabel-variabel berpangkat satu. SPL digunakan untuk menentukan kombinasi terbaik dari dua atau lebih pilihan agar hasilnya optimal, seperti menghitung biaya produksi, kecepatan dua kendaraan, atau percampuran bahan kimia.</p>
+            <h2> Sistem Persamaan Linear: Konsep dan Penyelesaiannya </h2>
+            <p> Persamaan linear didefinisikan sebagai persamaan aljabar yang setiap sukunya terdiri dari konstanta atau perkalian konstanta dengan variabel berpangkat satu. Apabila terdapat sekumpulan dari dua atau lebih persamaan semacam ini, maka kumpulan tersebut disebut sebagai Sistem Persamaan Linear. Penamaan “linear” menunjukkan bahwa grafik dari persamaan ini merepresentasikan sebuah garis lurus. </p>
+            <div class="math-block">
+                Bentuk umum persamaan linear dapat ditulis sebagai berikut
+                \[
+                \begin{cases}
+                a_{11}x_1 + a_{12}x_2 + a_{13}x_3 + \cdots + a_{1n}x_n = C_1\\
+                a_{21}x_1 + a_{22}x_2 + a_{23}x_3 + \cdots + a_{2n}x_n = C_2 \\
+                \vdots \\
+                a_{m1}x_1 + a_{m2}x_2 + a_{m3}x_3 + \cdots + a_{mn}x_n = C_m
+            \end{cases}
+                \]
+            </div>
+
+            <div class="math-block">
+                Jika dalam bentuk matriks dapat ditulis sebagai berikut
+               \[
+                \begin{bmatrix}
+                a_{11} & a_{12} & a_{13} & \dots & a_{1n} \\
+                a_{21} & a_{22} & a_{23} & \dots & a_{2n} \\
+                \vdots & \vdots & \vdots & \ddots & \vdots \\
+                a_{m1} & a_{m2} & a_{m3} & \dots & a_{mn}
+                \end{bmatrix}
+                \begin{bmatrix}
+                x_1 \\ x_2 \\ \vdots \\ x_n
+                \end{bmatrix}
+                =
+                \begin{bmatrix}
+                C_1 \\ C_2 \\ \vdots \\ C_m
+                \end{bmatrix}
+                \]
+            </div>
+
+            <p> Berdasarkan jumlah variabel yang dimiliki, persamaan linear dikelompokkan menjadi beberapa jenis. </p>
+            <h3> 1. Persamaan Linear Satu Variabel (PLSV) </h3>
+            <p> Persamaan linear ini menjadi bentuk yang paling dasar dengan memiliki satu jenis variabel dengan pangkat tertingginya adalah 1. Ketika digambarkan dalam grafik, interpretasinya hanya sebuah titik. Tujuannya adalah untuk mencari nilai tunggal dari variabel x yang memenuhi persamaan.</p>
+            <div class="math-block">
+                Bentuk Umum:
+                \[ax + b = 0\]
+            </div>
+
+            <p>
+                Keterangan:
+                <br> a = koefisien variabel \(x\). Dengan \( a \neq 0 \)
+                <br> b = konstanta
+                <br> x = variabel
+            </p>
+
+            <h3> 2. Persamaan Linear Dua Variabel (PLDV)</h3>
+            <p> 
+                Persamaan ini melibatkan hubungan antara dua variabel yang masing-masing berpangkat 1. Ketika digambarkan dalam sebuah grafik, interpretasinya adalah sebuah garis lurus.
+                Karena terdiri dari dua variabel, maka solusi yang diberikan tidak tunggal. Oleh karena itu, terdapat banyak pasangan nilai (\(x,y\)) yang memenuhi persamaan.
+            </p>
+            <div class="math-block">
+                Bentuk Umum:
+                \[ ax + by + c = 0 \]
+            </div>
+
+            </p>
+            <p>
+                Keterangan:
+                <br> a dan b = masing-masing koefisien variabel \(x\) dan \(y\). Dengan \(a, b \neq 0 \)
+                <br> c = konstanta
+                <br> x dan y = variabel
+            </p>
+            <h3> 3. Persamaan Linear Tiga Variabel </h3>
+            <p> Persamaan ini digunakan untuk memodelkan hubungan dalam ruang tiga dimensi. Ketika digambarkan dalam sebuah grafik, himpunan solusinya akan membentuk sebuah bidang datar.</p>
+            <div class="math-block">
+                Bentuk Umum:
+                \[ ax + by + cz + d = 0 \]
+            </div>
+
+            <p> 
+                Keterangan:
+                <br> a, b, dan c = masing- masing koefisien variabel \( x, y, z \neq 0 \)
+                <br> d = konstanta
+                <br> x, y , dan z = variabel
+            </p>
+            <h2> Metode Penyelesaian Sistem Persamaan Linear </h2>
+            <p> Sistem Persamaan Linear dapat diselesaikan menggunakan beberapa metode. Di antaranya terdapat : 
+            <ul>
+                <li> Metode Eliminasi </li>
+                <li> Metode Eliminasi </li>
+                <li> Metode Campuran </li>
+                <li> Metode Grafik </li>
+                <li> Metode Operasi Baris Elementer (OBE) </li>
+            </ul>    
+            </p>
+
+            <h3> Metode Eliminasi </h3>
+            <p> Metode eliminasi merupakan cara menyelesaikan sistem persamaan linear dengan menghilangkan salah satu variabel dalam persamaan tersebut dengan cara menjumlahkan atau mengurangkan kedua persamaan, setelah koefisien salah satu variabel dibuat sama.Misal, dalam persamaan tersebut memuat variabel x dan y. Untuk mencari nilai x, perlu untuk menghilangkan y terlebih dahulu. Begitu juga sebaliknya.</p>
+            <p> Langkah-langkah penyelesaiannya dapat dilakukan seperti di bawah ini: </p>
+            <ol>
+                <li>Perhatikan koefisien dari variabel yang ingin dieliminasi</li>
+                <li>Jika koefisiennya belum sama, kalikan kedua persamaan dengan bilangan yang sesuai sehingga koefisien salah satu variabel menjadi sama atau berlawanan tanda. </li>
+                <li>Jumlahkan atau kurangkan kedua persamaan untuk mengeliminasi variabel tersebut.</li>
+                <li>Lakukan langkah-langkah yang sama untuk  mendapatkan nilai dari variabel yang lain.</li>
+            </ol>
+            <p> Contoh soal: </p>
+            <p> Selesaikan SPLDV di bawah ini menggunakan eliminasi </p>
+            <div class="math-block">
+                \[
+                \begin{cases}
+                2x + y &= 8 \dots (1) \\
+                x - y &= 1 \dots (2)
+                \end{cases}
+                \]
+            </div>
+            <p> Perhatikan koefisien y. Pada persamaan (1), koefisien y bernilai +1, sedangkan pada persamaan kedua bernilai -1. Karena tanda keduanya berlawanan, kita dapat menjumlahkan kedua persamaan untuk menghilangkan y. </p>
+            <div class="math-block">
+                \[
+                \begin{aligned}
+                (2x + y) + ( x - y) &= 8 + 1 \\
+                2x+x+y-y&=9 \\
+                3x&=9 \\
+                x&=9/3=3
+                \end{aligned}
+                \]
+            </div>           
+            <p>Eliminasi x untuk menentukan y. Karena koefisien variabel x berbeda, kalikan persamaan dengan bilangan tertentu agar koefisien x sama, kemudian jumlahkan atau kurangkan persamaan. </p>
+            <p> Pada persamaan (2), koefisien variabel x bernilai satu. Untuk itu, kalikan persamaan dengan 2 agar koefisien nya sama dengan persamaan (1). </p>
+            <div class="math-block">
+                \[
+                \begin{aligned}
+                2(x-y)=2(1)→2x-2y=2
+                \end{aligned}
+                \]
+            </div>
+            <p> Setelah itu, kurangkan dengan persamaan (1) </p>
+            <div class="math-block">
+                \[
+                \begin{aligned}
+                (2x+y)-(2x-2y)&=8-2 \\
+                2x-2x+y+2y&=8-2 \\
+                3y&=6 \\
+                y&=6/3=2
+                \end{aligned}
+                \]
+            </div>
+            <p> Sehingga solusi yang memenuhi adalah \( x=3, \; y=2 \)</p>
+
+            <h3> Metode Subtitusi </h3>
+            <p> Metode subtitusi merupakan cara menyelesaikan SPL dengan mengubah satu variabel dengan variabel dari persamaan yang lain. </p>
+            <p> Langkah-langkah melakukan metode subtitusi </p>
+            <ol>
+                <li>Pilih salah satu persamaan dan ubah sehingga satu variabel dapat dinyatakan dalam variabel lainnya. </li>
+                <li>Gantikan ekspresi yang didapat ke dalam persamaan yang lain. </li>
+                <li>Selesaikan persamaan yang baru untuk menemukan nilai salah satu variabel. </li>
+                <li>Subtitusikan kembali nilai yang telah ditemukan ke dalam salah satu persamaan awal untuk menemukan nilai variabel yang lainnya. </li>
+            </ol>
+            <p> Contoh soal : </p>
+            <p> Selesaikan SPLDV di bawah ini menggunakan subtitusi </p>
+            <div class="math-block">
+                \[
+                \begin{cases}
+                2x + y &= 8 \dots (1) \\
+                x - y &= 1 \dots (2)
+                \end{cases}
+                \]
+            </div>
+            <p> Dari persamaan (2) didapatkan \(x=y+1\). Subtitusikan nilai tersebut ke ppersamaan (1). </p>
+             <div class="math-block">
+            \[
+            \begin{aligned}
+            2x+y&=8 \\
+            2(y+1)+y&=8 \\
+            2y+2+y&=8 \\
+            2y+y&=8-2 \\
+            3y&=6 \\
+            y&=6/3=2 \\
+            \end{aligned}
+            \]
+            </div>
+           <p> Setelah mendapatkan nilai y, subtitusi nilai tersebut ke salah satu persamaan untuk mendapatkan nilai x.</p> 
+            <div class="math-block">
+                \[
+                \begin{aligned}
+                x&=y+1 \\
+                x&=2+1=3
+                \end{aligned}
+                \]
+            </div>
+            <h3> Metode Campuran (Eliminasi-Subtitusi) </h3>
+            <p> Metode penyelesaian ini menggabungkan kelebihan dari metode eliminasi dan subtitusi. Kita menggunakan eliminasi untuk menyederhanakan sistem persamaan tersebut, lalu menggunakan subtitusi untuk menemukan solusi akhirnya. Ini adalah metode yang paling umum digunakan, terutama untuk SPLTV atau lebih. </p>
+            <p> Langkah-langkah penyelesaian menggunakan metode campuran : </p>
+            <ol>
+                <li>Gunakan metode eliminasi untukk menghilangkan satu variabel sehingga mendapatkan sistem persamaan yang lebih sederhana. </li>
+                <li>Dari sistem yang disederhanakan, selesaikan dengan subtitusi atau eliminasi sekali lagi. </li>
+            </ol>
+            <p> Contoh soal : </p>
+            <p> Selesaikan SPLTV di bawah ini menggunakan eliminasi-subtitusi </p>
+            <div class="math-block">
+                \[
+                \begin{cases}
+                x+y+z&=6 \dots (1)\\
+                2x-y+z&=3\dots (2)\\
+                x+2y-z&=5\dots (3)
+                \end{cases}
+                \]
+            </div>
+            <p> Perhatikan koefisien pada ketiga persamaan tersebut. Karena koefisien variabel z memiliki nilai yang sama, sehingga dapat dilakukan eliminasi dengan menjumlahkan atau mengurangkan dua di antara persamaan tersebut. Misal, mengurangkan persamaan (1) dari persamaan (2). </p>
+            <div class="math-block">
+                \[
+                \begin{aligned}
+                (2x-y+z)-(x+y+z)&=3-6 \\
+                2x-x-y-y+z-z&=3-6\\
+                x-2y&=-3→x=2y-3…(4)
+                \end{aligned}
+                \]
+            </div>
+            <p> Lalu, jumlahkan persamaan (1) dari persamaan (2). </p>
+            \[
+            \begin{aligned}
+            (x+y+z)+(x+2y-z)&=6+5\\
+            x+x+y+2y+z-z&=6+5\\
+            2x+3y&=11…(5)\\
+            \end{aligned}
+            \]
+            <p> Dari kedua persamaan yang baru, lakukan subtitusi atau eliminasi dari persamaan (4) dan persamaan (5). 
+                Karena pada perssamaaan (4) didapatkan \(x=2y-3\), ini dapat langsung disubtitusai dalam persamaan 5, sehingga diperoleh
+            </p>
+            <div class="math-block">
+                \[
+                \begin{aligned}
+                2x+3y&=11 \\
+                2(2y-3)+3y&=11\\
+                4y-6+3y&=11\\
+                4y+3y&=11+6\\
+                7y&=17\\
+                y&=\frac{17}{7}
+                \end{aligned}
+                \]
+            </div>
+            <p> Setelah mendapatkan nilai y, subtitusi lagi untuk mencari nilai x atau nilai z. Subtitusi pada (4) untuk mendapatkan nilai x terlebih dahulu.</p>
+            <div class="math-block">
+            \[
+            \begin{aligned}
+            x&=2y-3 \\
+            x&=2\left(\frac{17}{7}\right)-3\\
+            x&=\frac{34}{7}-3=\frac{34}{7}-\frac{21}{7}=\frac{13}{7}
+            \end{aligned}
+            \]
+            </div>
+           <p> Setelah mendapatkan nilai \(x=\frac{13}{7}, y=\frac{17}{7}\), subtitusi keduanya di antara 3 persamaan awal untuk mendapatkan nilai z. Subtitusi nilai x dan y ke persamaan (1) </p>
+           <div class="math-block">
+            \[
+            \begin{aligned}
+            x+y+z&=6\\
+            \frac{17}{7}+\frac{13}{7}+z&=6\\
+            \frac{30}{7}+z&=6\\
+            z&=6-\frac{30}{7}=\frac{42}{7}-\frac{30}{7}=\frac{12}{7}
+            \end{aligned}
+            \]
+           </div>
+           <p> Dengan demikian, didapatkan solusi yang memenuhi ketiga persamaan tersebut yaitu \(x=\frac{17}{7}, \; y=\frac{13}{7}, \; \text{dan} z=\frac{12}{7}\).</p>
+          
+           <h3> Metode Grafik </h3>
+           <p> Metode grafik biasanya digunakan dalam menyelesaikan sistem persamaan linear dua variabel. Dalam hal ini, kita diarahkan untuk menggambar grafik dari setiap persamaan linear pada bidang kartesius, dengan titik potong antara garis tersebut merupakan penyelesaian. </p>
+           <p> Langkah-langkah menggunakan metode grafik </p>
+           <ol>
+            <li>Cari titik potong pada sumbu x dan sumbu y masing-masing garis. Jika ingin menentukan titik potong di sumbu x, maka \(y=0\). Sebaliknya, jika ingin menentukan titik potong di sumbu y, maka \(x=0\).</li>
+            <li>Setelah grafik digambar, tentukan titik potong antara garis tersebut dengang menggunakan metode eliminasi atau subtitusi.</li>
+           </ol>
+
+           <h3> Metode Operasi Baris Elementer (OBE)</h3>
+           <p> Konsep operasi baris elementer dalam sistem persamaan linear menggunakan matriks dalam penyelesaiannya. OBE digunakan untuk menyederhanakan matriks menjadi bentuk yang lebih mudah dipecahkan, tanpa mengubah solusi dari sistem persamaan yang diwakilinya.  </p>
+           <p> Contoh soal : </p>
+           <p> Selesaikan Sistem Persamaan Linear Dua Variabel menggunakan operasi baris elementer </p>
+           <div class="math-block">
+           \[
+           \begin{cases}
+           2x+y&=8 \dots (1) \\
+           x-y&=1\dots (2) \\
+           \end{cases}
+           \]
+           </div>
+           <p>Ubah bentuk SPL ke dalam matriks. Untuk entri matriks tersebut merupakan koefisien variabel yang ada dalam persamaan. </p>
+           <div class="math-block">
+           \[
+           \begin{bmatrix}
+           2 & 1 \\
+           1 & -1\\
+           \end{bmatrix} \;
+           \begin{bmatrix}
+           8 \\ 
+           1
+           \end{bmatrix}
+           \]
+            </div>
+           <p>Setelah itu, angka-angka yang berada di diagonal utama harus 1. Karena pada baris 1 kolom 1 elemennya bernilai 2, maka posisinya dapat ditukar dengan baris yang di bawahnya atau baris 1 dapat dikalikan dengan \(\frac{1}{2}\). </p> 
+            <p>Ditukar dengan baris di bawahnya:</p>
+            <div class="math-block">
+            \[
+            \begin{bmatrix}
+            1 & -1 \\
+            2 & 1
+            \end{bmatrix} \;
+            \begin{bmatrix}
+            1 \\ 8
+            \end{bmatrix}
+            \]
+            </div>
+            <p>Baris pertama dikali dengan \( \frac{1}{2} \):</p>
+            <div class="math-block">
+            \[
+            \begin{bmatrix}
+            2\times\frac{1}{2} & 1\times\frac{1}{2} \\
+            1 & -1
+            \end{bmatrix} \;
+
+            \begin{bmatrix}
+            8\times\frac{1}{2} \\ 1
+            \end{bmatrix}
+            =
+            \begin{bmatrix}
+            1 & \frac{1}{2} \\
+            1 & -1
+            \end{bmatrix} \;
+
+            \begin{bmatrix}
+            4 \\ 1
+            \end{bmatrix}
+            \]
+            </div>
+
+            <p>Setelah itu, angka yang berada di bawah baris 1 kolom 1 (baris kedua) dijadikan nol, dengan cara mengurangkan baris kedua dengan baris 1. </p>
+            <div class="math-block">
+                \[
+                \begin{bmatrix}
+                1 & \frac{1}{2} \\
+                1-1 & -1-\frac{1}{2}
+                \end{bmatrix} \;
+                
+                \begin{bmatrix}
+                4 \\
+                1-4
+                \end{bmatrix} 
+                =
+                \begin{bmatrix} 
+                1 & \frac{1}{2}\\
+                0 &-\frac{3}{2}\\
+                \end{bmatrix} \;
+                
+                \begin{bmatrix}
+                4\\
+                -3
+                \end{bmatrix}
+                \]
+
+            </div>
+            <p> Ingat. Bahwa diagonal utama harus berniilai 1. Pada baris 2 kolom 2, nilainya tidak sama dengan 1. Untuk menjadikannya 1, kalikan baris kedua dengan \(\frac{-2}{3}\).</p>
+            <div class="math-block">
+                \[
+                \begin{bmatrix}
+                1 & \frac{1}{2}\\
+                0\times(-\frac{3}{2}) & -\frac{3}{2}\times (-\frac{2}{3})
+                \end{bmatrix} \;
+
+                \begin{bmatrix}
+                4\\
+                -3 \times (-\frac{2}{3})
+                \end{bmatrix}
+                =
+                \begin{bmatrix}
+                1 & \frac{1}{2}\\
+                0 & 1
+                \end{bmatrix} \;
+
+                \begin{bmatrix}
+                4\\
+                2
+                \end{bmatrix}
+                \]
+            </div>
+            <p>	Setelah itu, angka yang berada di atas baris 2 kolom 2 dijadikan nol. Dengan cara mengurangkan baris pertama dengan \(\frac{1}{2}\times \text{baris kedua}\)</p>
+            <div class="math-block">
+                \[
+                \begin{bmatrix}
+                1-(\frac{1}{2} \times 0) & \frac{1}{2} - (1\times \frac{1}{2}) \\
+                0 & 1
+                \end{bmatrix}
+
+                \begin{bmatrix}
+                4-(2 \times \frac{1}{2})\\
+                2
+                \end{bmatrix}
+                =
+                \begin{bmatrix}
+                1 & 0\\
+                0 & 1
+                \end{bmatrix}
+
+                \begin{bmatrix}
+                3\\
+                2
+                \end{bmatrix}
+                \]
+           </div>
+           <p> Karena entri  matriks ini adalah koefisien dari persamaan awal, sehingga ketika dijadikan kembali dalam bentuk persamaan terbentuk</p>
+           \[
+           \begin{cases}
+           1x + 0y &= 3\\
+           0x + 1y &= 2
+           \end{cases} 
+           \]
+           <p> Artinya, nilai dari \(x=3, \; y=2\)</p>
+        </div>
+        <!-- materi belajar selesai -->
+         </div>
+
+         <footer>
+            <p> Pendidikan Matematika Universitas Negeri Makassar 2025</p>
+            <div class="footer-links">
+                <a href="aboutus.html"> About Us </a>
+            </div>
+         </footer>
+          <script src= "script.js"> </script>
+    </body>
+</html>

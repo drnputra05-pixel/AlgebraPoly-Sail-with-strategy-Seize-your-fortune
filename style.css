@@ -1,0 +1,168 @@
+header {
+  position: relative;
+  padding: 50px 25px;
+  text-align: center;
+  color: #f8f1d8;
+  background-image: url("1.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+  margin: 20px;
+  border: 3px solid #d4af37;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+header.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  z-index: 0;
+}
+
+header h1,
+header h2,
+header p {
+  position: relative;
+  z-index: 1;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+@font-face {
+  font-family: "PiratesScroll";
+  src: url("fonts/Pirate Scroll.otf") format("truetype");
+}
+
+.judul {
+  font-family: "PiratesScroll", cursive;
+  font-size: 2.5rem;
+  font-weight: 320;
+  color: #f8f1d8;
+  margin-bottom: 10px;
+}
+
+.subjudul {
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  font-size: 1.3rem;
+  color: #f8f1d8;
+  font-style: italic;
+}
+
+
+body {
+  background: 
+    radial-gradient(ellipse at center, #ff7e5f 0%, #feb47b 30%, #1a1a2e 70%);
+  min-height: 100vh;
+  color: black;
+}
+
+@font-face {
+  font-family: "PiratesScroll";
+  src: url("fonts/Pirate\ Scroll.otf") format("truetype");
+}
+
+.container {
+  display:flex;
+  gap: 20px;
+  padding: 20px;
+  justify-content: flex-start;
+}
+
+.isi{
+  display:flex;
+  justify-content: flex-start;
+  margin: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  color: black
+}
+.isi ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width:222px;
+}
+
+.isi li {
+  list-style:none;
+  background: url('pirate-pattern.png');
+  position: relative;
+  background-color: #f7f2e8;
+  border: 2px solid #e9bf7f;
+  border-radius: 10px;
+  padding: 25px;
+  text-align:left;
+  cursor:pointer;
+  transition: 0.3s ease-in-out;
+  margin-bottom: 10px;
+}
+
+.isi li:hover{
+  background-color: #b39363;
+  color: #252323;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2)
+}
+
+.isi a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.deskripsi{
+  flex:1;
+  min-width:400px;
+  background: rgba(248, 241, 216, 0.95);
+  border: 2px solid #d4af37;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 16px;
+  text-align: justify;
+  line-height: 1.6;
+  word-wrap:break-word;
+}
+
+.math-block{
+  background: #fff8e5;
+  border-left: 4px solid #d4af37;
+  border-radius: 0 10px 10px 0;
+  padding: 10px;
+  text-align: left;
+  margin: 15px 0;
+  overflow-x: auto;
+}
+
+footer{
+  background-color:rgba(248, 241, 216, 0.95);
+  color: black;
+  text-align: center;
+  padding: 25px;
+  border-radius:10px;
+  margin-top:40px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover{
+  color: #ffd700;
+  text-decoration: underline;
+}

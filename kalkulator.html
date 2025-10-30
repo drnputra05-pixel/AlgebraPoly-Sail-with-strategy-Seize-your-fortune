@@ -1,0 +1,62 @@
+<html>
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Kalkulator Persamaan Linear </title>
+        <link rel="stylesheet" href="style-kalkulator.css">
+        <script>
+            window.MathJax={
+                tex: { inlineMath: [['\\(', '\\)']]}
+            };
+        </script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+            <header class="Bagian-atas">
+            <h1 class="judul"> AlgebraPoly: Belajar Aljabar dengan Monopoli </h1>
+            <p class="subjudul"> Sail with strategy, Seize your fortune </p>
+            </header>
+            
+            <main class="kalkulator-container">
+                <section class="pilihan">
+                    <h2>Kalkulator Persamaan Linear</h2>
+                    
+                    <label for="JumlahVariabel">Jumlah Variabel:</label>
+                    <select id="JumlahVariabel">
+                        <option value=""disabled selected>Pilih Jumlah Variabel</option>
+                        <option value="2">2 Variabel (\(x, y)\)</option>
+                        <option value="3">3 Variabel (\(x, y, z\))</option>
+                        <option value="4">4 Variabel (\(x_1, x_2, x_3, x_4)\)</option>
+                        <option value="5">5 Variabel (\(x_1, x_2, x_3, x_4, x_5)\)</option>
+                    </select>
+
+                    <label for="Metode">Metode Penyelesaian</label>
+                    <select id="Metode">
+                        <option value=""disabled selected>Pilih Metode Penyelesaian</option>
+                        <option value="Eliminasi">Metode Eliminasi</option>
+                        <option value="Subtitusi">Metode Subtitusi</option>
+                        <option value="Campuran">Metode Eliminasi-Subtitusi</option>
+                        <option value="OBE">Metode OBE</option>
+                    </select>
+
+                    <button id="generateinput">Masukkan Persamaan</button>
+                    <div>
+                        <form id="persamaanForm" class="persamaan-form">
+                            <!--  -->
+                        </form>
+                        <button id="hitungbutton" class="hidden">Hitung</button>
+                        <div id="hasil" class="hasil-section hidden">
+                            <h3>Langkah-Langkah Penyelesaian:</h3>
+                            <div id="langkahpenyelesaian"></div>
+                            <!--  -->
+                        </div>
+                        <div id="grafikSPLDV" class="hidden"></div>
+                        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+                    </div>
+                </section>
+            </main>
+    </body>
+    <script src="script-kalkulator.js"></script>
+</html>
