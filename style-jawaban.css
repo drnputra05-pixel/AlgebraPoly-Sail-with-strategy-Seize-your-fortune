@@ -8,8 +8,11 @@
     --box-shadow: 0 4px 15px rgba(0,0,0,.15);
     --transition: all .3s ease;
 }
+  font-family: "PiratesScroll";
+  src: url("fonts/Pirate Scroll.otf") format("truetype");
 
 * {
+    
     box-sizing: border-box;
 }
 
