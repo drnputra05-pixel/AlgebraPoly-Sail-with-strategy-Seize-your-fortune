@@ -1,66 +1,47 @@
 window.addEventListener("DOMContentLoaded", () => {
-    const header = document.querySelector("header");
+
+    // animasi header
+    const header = document.querySelector(".Bagian-atas");
     if (header) {
         setTimeout(() => header.classList.add("show"), 200);
     }
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const soalId = urlParams.get("id");
-    const semuaSection = document.querySelectorAll("section");
+    // mode QR (id soal)
+    const soalId = new URLSearchParams(window.location.search).get("id");
+    const sections = document.querySelectorAll("section");
 
-    function handleDisplay() {
-        semuaSection.forEach(sec => sec.style.display = "block");
+    sections.forEach(sec => sec.style.display = "block");
 
-        if (soalId) {
-            semuaSection.forEach(sec => sec.style.display = "none");
-            const target = document.getElementById(soalId);
-            if (target) target.style.display = "block";
-        }
-
-        document.querySelectorAll(".penjelasan").forEach(penjelasan => {
-            setupPenjelasanToggle(penjelasan);
-        });
+    if (soalId) {
+        sections.forEach(sec => sec.style.display = "none");
+        const target = document.getElementById(soalId);
+        if (target) target.style.display = "block";
     }
 
-    function setupPenjelasanToggle(penjelasanEl) {
-        const judul = penjelasanEl.querySelector("h3");
-        if (!judul) return;
+    // toggle penjelasan
+    document.querySelectorAll(".penjelasan").forEach(penjelasan => {
+        const judul = penjelasan.querySelector("h3");
+        const content = penjelasan.querySelector(".penjelasan-content");
 
-        let content = penjelasanEl.querySelector(".penjelasan-content");
+        if (!judul || !content) return;
 
-        if (!content) {
-            content = document.createElement("div");
-            content.className = "penjelasan-content";
-
-            [...penjelasanEl.children].forEach(child => {
-                if (child !== judul) content.appendChild(child);
-            });
-
-            penjelasanEl.appendChild(content);
-        }
-
+        // default TERTUTUP
+        penjelasan.classList.remove("open");
         content.style.display = "none";
-        penjelasanEl.classList.remove("open");
-
         judul.textContent = "📚 Penjelasan";
         judul.style.cursor = "pointer";
 
-        judul.onclick = () => {
-            const isOpen = penjelasanEl.classList.contains("open");
+        judul.addEventListener("click", () => {
+            const buka = penjelasan.classList.toggle("open");
 
-            penjelasanEl.classList.toggle("open", !isOpen);
-            content.style.display = isOpen ? "none" : "block";
-            judul.textContent = isOpen ? "📚 Penjelasan" : "📖 Penjelasan";
+            content.style.display = buka ? "block" : "none";
+            judul.textContent = buka ? "📖 Penjelasan" : "📚 Penjelasan";
 
-            if (!isOpen && window.MathJax) {
+            // MathJax hanya saat dibuka
+            if (buka && window.MathJax) {
                 MathJax.typesetPromise([content]).catch(() => {});
             }
-        };
-    }
+        });
+    });
 
-    if (window.MathJax?.startup) {
-        MathJax.startup.promise.then(handleDisplay);
-    } else {
-        handleDisplay();
-    }
 });
