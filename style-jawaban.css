@@ -12,6 +12,7 @@
   font-family: "PiratesScroll";
   src: url("fonts/Pirate Scroll.otf") format("truetype");
 }
+
 * {
     
     box-sizing: border-box;
@@ -148,4 +149,5 @@ mjx-container {
         padding: 30px 15px;
     }
 }
+
 
