@@ -11,24 +11,29 @@ window.addEventListener("DOMContentLoaded", () => {
     function handleDisplay() {
         console.log("Soal ID:", soalId);
 
-        if (!soalId) {
-            console.log("Mode: Tampilkan semua soal");
-            semuaGrup.forEach(grup => {
-                grup.style.display = "block";
-                const sections = grup.querySelectorAll("section");
-                sections.forEach(section => {
-                    section.style.display = "block";
-                    const soalText = section.querySelector(".soal-text");
-                    const penjelasan = section.querySelector(".penjelasan");
-                    if (soalText) soalText.style.display = "block";
-                    if (penjelasan) {
-                        penjelasan.style.display = "block";
-                        setupPenjelasanToggle(penjelasan, false); // Penjelasan collapsed
-                    }
-                });
-            });
-            return;
+        if (soalId) {
+        document.querySelectorAll('.soal-group').forEach(g => g.style.display = 'none');
+        document.querySelectorAll('section').forEach(s => s.style.display = 'none');
+        
+        const target = document.getElementById(soalId);
+        if (!target) return;
+
+        const parentGroup = target.closest('.soal-group');
+        if (parentGroup) parentGroup.style.display = 'block';
+
+        target.style.display = 'block';
+
+        const soalText = target.querySelector('.soal-text');
+        const penjelasan = target.querySelector('.penjelasan');
+
+        if (soalText) soalText.style.display = 'none';
+        if (penjelasan) {
+            penjelasan.style.display = 'block';
+            setupPenjelasanToggle(penjelasan, true);
         }
+
+        return;
+    }
 
         console.log("Mode: Single soal - mencari:", soalId);
         
@@ -129,4 +134,5 @@ function setupPenjelasanToggle(penjelasanEl, autoExpand = false) {
     } else {
         setTimeout(handleDisplay, 1000);
     }
+
 });
